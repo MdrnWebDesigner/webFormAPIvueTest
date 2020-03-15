@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="english">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ticketing system</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<body>
+
+	<form id="app">
+
+	<span v-for="e in error"> {{ e }}</span>
+
+	<section v-if="step == 1">
+		<h2> Step 1</h2>
+		<input v-model="form.name" type="text" placeholder="Name">
+	</section>
+
+	<section v-if="step == 2">
+		<h2>Step 2</h2>
+		<input v-model="form.email" type="email" placeholder="Email">
+	</section>
+
+	<section v-if="step == 3">
+		<h2>Step 3</h2>
+		<textarea v-model="form.message" type="textarea" placeholder="Message">... </textarea>
+	</section>
+
+  </form>
+  <button
+  v-if="step !== 1" 
+  @click.prevent="previousStep">Previous Step</button>
+
+  <button
+  v-if="step != totalsteps" 
+  @click.prevent="nextStep">Next Step</button>
+
+  <button
+  v-if="step == 3" 
+  @click.prevent="submitform0">Submit</button>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+
+</html>

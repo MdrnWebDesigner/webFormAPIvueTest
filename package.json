@@ -1,0 +1,25 @@
+{
+  "name": "keapapiwebformdeploy",
+  "version": "1.0.0",
+  "description": "webform for api",
+  "main": "index.js",
+  "scripts": {
+    "test": "pikachu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdrnWebDesigner/webFormAPIvueTest.git"
+  },
+  "keywords": [
+    "webform"
+  ],
+  "author": "Aidan Coleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdrnWebDesigner/webFormAPIvueTest/issues"
+  },
+  "homepage": "https://github.com/mdrnWebDesigner/webFormAPIvueTest#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
